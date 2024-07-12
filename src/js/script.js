@@ -6,12 +6,13 @@ const telegramBotId = "7214628321:AAHVYLKbQ3ZzyFlQq5yXuMp7ngp1EutB9uM";
 const url = "https://api.telegram.org/bot" + telegramBotId + "/sendMessage";
 
 // form elements
-const elComment = document.querySelector(".js-comment");
 const elLastName = document.querySelector(".js-last-name");
 const elFirstName = document.querySelector(".js-first-name");
 const elPhoneNumber = document.querySelector(".js-phone-number");
 const elRegisterForm = document.querySelector(".js-register-form");
 const elTelegramUserName = document.querySelector(".js-telegram-username");
+const elClassSelect = document.querySelector(".js-class-select");
+const elDirectionSelect = document.querySelector(".js-direction-select");
 
 // get input value
 const getInputValue = (input) => {
@@ -27,7 +28,8 @@ const sendRequest = (e) => {
 👥 Familiyasi: ${getInputValue(elLastName)}
 ☎️ Telefon raqami: ${getInputValue(elPhoneNumber)}
 🔑 Telegram foydalanuvchi nomi: @${getInputValue(elTelegramUserName)}
-✉️ Izoh: ${getInputValue(elComment)}`;
+📚 Sinf: ${getInputValue(elClassSelect)}
+📘 Yo'nalish: ${getInputValue(elDirectionSelect)}`;
 
   // form data
   const formData = {
@@ -44,12 +46,42 @@ const sendRequest = (e) => {
       alert("Nimadir xato ketdi!");
     });
 
-  elComment.value = "";
   elFirstName.value = "";
   elLastName.value = "";
   elPhoneNumber.value = "";
   elTelegramUserName.value = "";
+  elClassSelect.value = "";
+  elDirectionSelect.value = "";
+  elDirectionSelect.disabled = true;
 };
+
+// handle class change
+const handleClassChange = () => {
+  const classValue = elClassSelect.value;
+  elDirectionSelect.innerHTML = '<option value="" disabled selected>Yo\'nalishni tanlang</option>';
+  
+  if (classValue < '5') {
+    elDirectionSelect.innerHTML += `
+      <option value="O'zbek sinf">O'zbek sinf</option>
+      <option value="Rus sinf">Rus sinf</option>
+      <option value="Ingliz sinf">Ingliz sinf</option>
+    `;
+    elDirectionSelect.disabled = false;
+  } else if (classValue >= '5' || classValue < 10) {
+    elDirectionSelect.innerHTML += `
+      <option value="Tibbiyot">Tibbiyot</option>
+      <option value="Harbiy">Harbiy</option>
+      <option value="Moliya">Moliya</option>
+      <option value="Xorijiy til va filalogiya">Xorijiy til va filalogiya</option>
+      <option value="Axborot texnalogiyalari">Axborot texnalogiyalari</option>
+    `;
+    elDirectionSelect.disabled = false;
+  } else {
+    elDirectionSelect.disabled = true;
+  }
+};
+
+elClassSelect.addEventListener("change", handleClassChange);
 elRegisterForm.addEventListener("submit", sendRequest);
 
 // input masks

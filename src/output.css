@@ -478,7 +478,7 @@ h2{
 }
 
 input,
-  textarea{
+  textarea, select{
   width: 100%;
   resize: vertical;
   border-radius: 0.5rem;
@@ -492,7 +492,7 @@ input,
 }
 
 input:focus,
-  textarea:focus{
+  textarea:focus, select:focus{
   --tw-border-opacity: 1;
   border-color: rgb(13 95 249 / var(--tw-border-opacity));
   outline: 2px solid transparent;
