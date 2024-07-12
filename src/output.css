@@ -985,11 +985,6 @@ table :is(th, td) {
   height: 2.5rem;
 }
 
-.size-12{
-  width: 3rem;
-  height: 3rem;
-}
-
 .size-14{
   width: 3.5rem;
   height: 3.5rem;
@@ -3124,6 +3119,12 @@ table :is(th, td) {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .swiper-slide{
+    height: 350px;
+  }
 }
 
 @media (min-width: 640px){
