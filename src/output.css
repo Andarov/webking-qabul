@@ -1025,14 +1025,6 @@ table :is(th, td) {
   height: 100vh;
 }
 
-.max-h-96{
-  max-height: 24rem;
-}
-
-.min-h-40{
-  min-height: 10rem;
-}
-
 .w-\[this-is\\\\\]{
   width: this-is\\;
 }

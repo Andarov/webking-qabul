@@ -10,7 +10,7 @@ const elLastName = document.querySelector(".js-last-name");
 const elFirstName = document.querySelector(".js-first-name");
 const elPhoneNumber = document.querySelector(".js-phone-number");
 const elRegisterForm = document.querySelector(".js-register-form");
-const elTelegramUserName = document.querySelector(".js-telegram-username");
+const elTavsiya = document.querySelector(".js-tavsiya-select");
 const elClassSelect = document.querySelector(".js-class-select");
 const elDirectionSelect = document.querySelector(".js-direction-select");
 
@@ -27,7 +27,7 @@ const sendRequest = (e) => {
   const message = `👤 Ismi: ${getInputValue(elFirstName)}
 👥 Familiyasi: ${getInputValue(elLastName)}
 ☎️ Telefon raqami: ${getInputValue(elPhoneNumber)}
-🔑 Telegram foydalanuvchi nomi: @${getInputValue(elTelegramUserName)}
+🔑 Qaerdan eshitdi: ${getInputValue(elTavsiya)}
 📚 Sinf: ${getInputValue(elClassSelect)}
 📘 Yo'nalish: ${getInputValue(elDirectionSelect)}`;
 
@@ -49,7 +49,7 @@ const sendRequest = (e) => {
   elFirstName.value = "";
   elLastName.value = "";
   elPhoneNumber.value = "";
-  elTelegramUserName.value = "";
+  elTavsiya.value = "";
   elClassSelect.value = "";
   elDirectionSelect.value = "";
   elDirectionSelect.disabled = true;
