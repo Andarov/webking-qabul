@@ -22,6 +22,7 @@ module.exports = {
 
       backgroundImage: {
         working: "url(./images/others/working.webp)",
+        'heroBg': "linear-gradient(180deg, rgba(9, 9, 9, 0.30) 0%, #09161F 1000%), url('./images/others/bg.png')",
       },
     },
   },

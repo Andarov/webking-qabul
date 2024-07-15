@@ -2237,10 +2237,6 @@ table :is(th, td) {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-black\/10{
-  background-color: rgb(0 0 0 / 0.1);
-}
-
 .bg-brand-blue-500{
   --tw-bg-opacity: 1;
   background-color: rgb(13 95 249 / var(--tw-bg-opacity));
@@ -2288,12 +2284,12 @@ table :is(th, td) {
   --tw-bg-opacity: 0.7;
 }
 
-.bg-\[url\(\.\/images\/others\/hero-bg\.jpg\)\]{
-  background-image: url(./images/others/hero-bg.jpg);
-}
-
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-heroBg{
+  background-image: linear-gradient(180deg, rgba(9, 9, 9, 0.30) 0%, #09161F 1000%), url('./images/others/bg.png');
 }
 
 .bg-working{
