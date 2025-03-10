@@ -1,8 +1,8 @@
 // import { gallery } from "../data/data";
 
 // comment is not andifayned
-const chatId = -1002173135461;
-const telegramBotId = "7214628321:AAHVYLKbQ3ZzyFlQq5yXuMp7ngp1EutB9uM";
+const chatId = -1002323027305;
+const telegramBotId = "7685530961:AAEVNXXXlCGEPDllwBdmlPCu6y5Ops7WpuU";
 const url = "https://api.telegram.org/bot" + telegramBotId + "/sendMessage";
 
 // form elements
